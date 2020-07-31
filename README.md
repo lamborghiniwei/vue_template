@@ -1,5 +1,7 @@
 # vue_template
 
+### 选择 ESLint 代码校验规则，提供一个插件化的javascript代码检测工具，ESLint + Prettier 使用较多
+
 ## Project setup
 ```
 npm install

@@ -13,6 +13,16 @@ export default {
   name: "Home",
   components: {
     HelloWorld
+  },
+  mounted () {
+    console.log(5555)
+    this.initData()
+  },
+  methods: {
+    initData () {
+      const a = 555
+      console.log(a)
+    }
   }
 };
 </script>
