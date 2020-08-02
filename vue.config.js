@@ -19,7 +19,8 @@ module.exports = {
     //         config.entry('app').clear().add('./src/main-dev.js')
     //     })
     // }
-    
+    // 55555
+
     outputDir: "enterprise-H5", //打包后的项目目录名称
     assetsDir: 'enterprise-H5-static', // 配置js、css静态资源二级目录的位置
     indexPath: 'enterprise_index.html', // 打包后index.html名称
