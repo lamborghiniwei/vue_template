@@ -23,6 +23,7 @@ module.exports = {
     //  outputDir: "dist", //打包后的项目目录名称
     //  assetsDir: 'static', // 配置js、css静态资源二级目录的位置
     //  indexPath: 'index.html', // 打包后index.html名称
+    publicPath: './',
     devServer: {
         port: 8080, // 端口号
         host: 'localhost',
