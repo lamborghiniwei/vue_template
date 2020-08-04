@@ -1,13 +1,11 @@
 <template>
-  <div ref="linechart1" class="barchart2"></div>
+  <div :ref="'echarts'+uid" class="echarts-box"></div>
 </template>
 
 <script>
+import echartMixins from './resize_mixins'
 let echarts = require("echarts");
-export default {
-  data() {
-    return {
-      options: {
+const options = {
         grid: {
           top: "15%",
           left: "0",
@@ -148,8 +146,13 @@ export default {
             data: []
           }
         ]
-      },
-      lineChart: null
+      }
+export default {
+  mixins: [echartMixins],
+  data() {
+    return {
+      uid: '',
+      chart: null
     };
   },
   props: {
@@ -166,33 +169,20 @@ export default {
   },
   mounted() {
     this.init();
-    window.addEventListener("resize", () => {
-      if (this.lineChart) {
-        this.lineChart.resize();
-      }
-    });
-    this.$once("hook:beforeDestroy", () => {
-      window.removeEventListener("resize", () => {
-        if (this.lineChart) {
-          this.lineChart.clear();
-          this.lineChart = null;
-        }
-      });
-    });
   },
   components: {},
   computed: {},
   methods: {
     init() {
       if (this.list) {
-        this.options.series[0].data = this.list;
+        options.series[0].data = this.list;
         if (this.max) {
-          this.options.yAxis[0].max = this.max;
+          options.yAxis[0].max = this.max;
         }
       }
-      let chartDom = this.$refs["linechart1"];
-      this.lineChart = echarts.init(chartDom);
-      this.lineChart.setOption(this.options);
+      let chartDom = this.$refs[`echarts${this.uid}`];
+      this.chart = echarts.init(chartDom);
+      this.chart.setOption(options);
     }
   },
   watch: {
@@ -207,7 +197,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.barchart2 {
+.echarts-box {
   height: 100%;
 }
 </style>
