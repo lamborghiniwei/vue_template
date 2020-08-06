@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     success
-    <line222 :list='[1,5,8,9,41,85]' />
   </div>
 </template>
 
@@ -14,9 +13,6 @@ export default {
     return {
       list: []
     }
-  },
-  components: {
-    line222
   }
 };
 </script>
