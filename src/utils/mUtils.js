@@ -830,20 +830,5 @@ export const strParse = (str) => {
   }
 };
 
-/**
- * 检测获取到值是不是异常值
- * @param val
- */
-export const checkUndefined = (val) => {
-  switch (val) {
-    case undefined:
-    case 'undefined':
-    case null:
-    case 'null':
-    case '':
-      return '';
-    default:
-      return val;
-  }
-};
+
 
