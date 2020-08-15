@@ -47,5 +47,6 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+    productionSourceMap: true, // false时候build打包时取消.map文件
 }
