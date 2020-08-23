@@ -1,10 +1,11 @@
 /* 
 * @Author: lzw  
 * @Date: 2020-08-04 21:46:23  
-* @Last Modified by: lzw
-* @Last Modified time: 2020-08-04 22:01:53
+ * @Last Modified by: lzw
+ * @Last Modified time: 2020-08-23 21:58:42
 * 混入代码 resize_mixins.js
 */
+//  2020-08-23多图表测试 有bug  单一图表可以 待解决
 import { debounce } from 'lodash'
 const resizeChartMethod = '$__resizeChartMethod'
 export default {
