@@ -50,3 +50,6 @@ module.exports = {
     },
     productionSourceMap: true, // false时候build打包时取消.map文件
 }
+//  vscode同步gist： bbc2d960388cc6d7d033754976ec1ec7
+//  字体名字：'Fira Code',Consolas, 'Courier New', monospace
+//  主题颜色： Dracula
